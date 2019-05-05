@@ -67,12 +67,18 @@ void draw() {
     rotatingLogo();
     stroke(0);
     drawWhiteKeys();
+    drawBlackKeys();
   }
 }
 
 void drawWhiteKey(int x_key_coordenates) {
   strokeWeight(3);
   rect(x_key_coordenates, height/2 - 90, 120, 450, 3, 6, 12, 18);
+}
+
+void drawBlackKey(int x_key_coordenates) {
+  strokeWeight(3);
+  rect(x_key_coordenates + 90, height/2 - 90, 40, 330, 3, 6, 12, 18);
 }
 
 
