@@ -1,7 +1,6 @@
-//frist sensor
+//first sensor
 const int trigger_1 = 2;
 const int echo_1 = 3;
-//global
 long duration_1;
 int distance_1;
 
@@ -18,8 +17,6 @@ void loop()
   delay(30);
   distance_1 = getDistanceOfFirstSensor();
   Serial.print(distance_1); //first sensor
-  Serial.print("-");
-  Serial.print("tbd"); //second sensor
   //Back
   Serial.print("B");
 }
