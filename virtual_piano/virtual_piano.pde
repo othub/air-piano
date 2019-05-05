@@ -63,18 +63,16 @@ void draw() {
   }
   //let the fun begin
   if (start) {
-    background(255);
+    background(245, 245, 245); 
     rotatingLogo();
-    // key C1
-    fill(255);
-    drawWhiteKey(210);
+    stroke(0);
+    drawWhiteKeys();
   }
 }
 
-
 void drawWhiteKey(int x_key_coordenates) {
-  strokeWeight(5);
-  rect(x_key_coordenates, height/2 - 90, 120, 480, 3, 6, 12, 18);
+  strokeWeight(3);
+  rect(x_key_coordenates, height/2 - 90, 120, 450, 3, 6, 12, 18);
 }
 
 
