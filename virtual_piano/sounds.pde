@@ -81,61 +81,61 @@ void keyPressed() {
 
 
   if (key == '1') {
-    c1_sharp_1 = 255;
+    c1_sharp_1 = 235;
     c1_sharp_2 = 125;
     minim.loadSample("notes/C1_sharp.wav").trigger();
   }
 
   if (key == '2') {
-    d1_sharp_1 = 255;
+    d1_sharp_1 = 235;
     d1_sharp_2 = 125;
     minim.loadSample("notes/D1_sharp.wav").trigger();
   }
 
   if (key == '3') {
-    f1_sharp_1 = 255;
+    f1_sharp_1 = 235;
     f1_sharp_2 = 125;
     minim.loadSample("notes/F1_sharp.wav").trigger();
   }
 
   if (key == '4') {
-    g1_sharp_1 = 255;
+    g1_sharp_1 = 235;
     g1_sharp_2 = 125;
     minim.loadSample("notes/G1_sharp.wav").trigger();
   }
 
   if (key == '5') {
-    a1_sharp_1 = 255;
+    a1_sharp_1 = 235;
     a1_sharp_2 = 125;
     minim.loadSample("notes/A1_sharp.wav").trigger();
   }
 
   if (key == '6') {
-    c2_sharp_1 = 255;
+    c2_sharp_1 = 235;
     c2_sharp_2 = 125;
     minim.loadSample("notes/C2_sharp.wav").trigger();
   }
 
   if (key == '7') {
-    d2_sharp_1 = 255;
+    d2_sharp_1 = 235;
     d2_sharp_2 = 125;
     minim.loadSample("notes/D2_sharp.wav").trigger();
   }
 
   if (key == '8') {
-    f2_sharp_1 = 255;
+    f2_sharp_1 = 235;
     f2_sharp_2 = 125;
     minim.loadSample("notes/F2_sharp.wav").trigger();
   }
 
   if (key == '9') {
-    g2_sharp_1 = 255;
+    g2_sharp_1 = 235;
     g2_sharp_2 = 125;
     minim.loadSample("notes/G2_sharp.wav").trigger();
   }
 
   if (key == '0') {
-    a2_sharp_1 = 255;
+    a2_sharp_1 = 235;
     a2_sharp_2 = 125;
     minim.loadSample("notes/A2_sharp.wav").trigger();
   }
