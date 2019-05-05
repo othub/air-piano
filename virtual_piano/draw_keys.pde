@@ -48,11 +48,11 @@ void drawWhiteKeys() {
   drawWhiteKey(1320);
   
   // key A2
-  fill(255, 255, g2);
+  fill(255, 255, a2);
   drawWhiteKey(1430);
   
   // key B2
-  fill(255, 255, g2);
+  fill(255, 255, b2);
   drawWhiteKey(1540);
 }
 

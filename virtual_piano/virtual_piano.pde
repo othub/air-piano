@@ -40,8 +40,6 @@ void setup() {
 
   //minim
   minim = new Minim(this);
-  //test = minim.loadSample("notes/A1.wav");
-  //test.trigger();
 
   //welcome view
   if (!start) {
