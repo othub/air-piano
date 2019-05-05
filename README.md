@@ -1,2 +1,2 @@
-# interactive-piano
-playing piano in processing using sensors and/or keyboards
+# Air Piano
+playing piano in processing and arduino using sr04 sensor and/or keyboard.
