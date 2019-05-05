@@ -1,6 +1,6 @@
 void measureAndPlay() {
   if (distance < 200 && distance >= 195  ) {
-    
+
     robot.keyPress(KeyEvent.VK_Q);
     robot.keyRelease(KeyEvent.VK_Q);
   } else if (distance < 195 && distance >= 190  ) {

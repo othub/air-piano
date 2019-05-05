@@ -1,10 +1,10 @@
 void drawWhiteKeys() {
   // key C1
-  fill( c1,255, 255);
+  fill( c1, 255, 255);
   drawWhiteKey(190);
 
   // key D1
-  fill(d1,255, 255);
+  fill(d1, 255, 255);
   drawWhiteKey(300);
 
   // key E1
@@ -46,11 +46,11 @@ void drawWhiteKeys() {
   // key G2
   fill(g2, 255, 255);
   drawWhiteKey(1400);
-  
+
   // key A2
   fill(a2, 255, 255);
   drawWhiteKey(1510);
-  
+
   // key B2
   fill(b2, 255, 255);
   drawWhiteKey(1620);
@@ -88,11 +88,11 @@ void drawBlackKeys() {
   // key F2#
   fill(0, f2_sharp, f2_sharp);
   drawBlackKey(1290);
-  
+
   // key G2#
   fill(0, g2_sharp, g2_sharp);
   drawBlackKey(1400);
-  
+
   // key A2#
   fill(0, a2_sharp, a2_sharp);
   drawBlackKey(1510);

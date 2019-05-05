@@ -76,10 +76,10 @@ void draw() {
   //let the fun begin
   if (start) {
     background(245, 245, 245); 
-    
+
     //logo
     rotatingLogo();
-    
+
     //information
     stroke(0);
     fill(0, 102, 153);
@@ -87,12 +87,12 @@ void draw() {
     text("White keys : QWERTYU for first half", 40, 200);
     text("White keys : ASDFGHJ for second half", 40, 250);
     text("Black keys : 1234567890", 40, 350);
-    
+
     //drawings and sounds
     drawWhiteKeys();
     drawBlackKeys();
     measureAndPlay();
-    
+
     text("You are " + distance + " cm away from the sensor", width/2 - 300, height - 50);
   }
 }
