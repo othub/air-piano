@@ -5,14 +5,14 @@ import java.awt.Robot;
 import java.awt.event.KeyEvent;
 
 //arduino
-Serial arduino; 
+Serial arduino;
 int distance;
 
 //start
 boolean start=false;
 
 //welcome variables
-String welcomeText = "Interactive Piano using Arduino";
+String welcomeText = "Air Piano using Arduino";
 String welcomeText2 = "You can use your keyboard keys to play or Move your fingers in the air";
 String welcomeText3 = "Situate Yourself between 75 cm and 200 cm from the sensor";
 String welcomeText4 = "Click 'B' to start :)";
@@ -50,9 +50,9 @@ void setup() {
   if (!start) {
     background(255);
     fill(0, 102, 153);
-    text(welcomeText, width / 2 - 250, height/2 - 60);
+    text(welcomeText, width / 2 - 185, height/2 - 60);
     text(welcomeText2, width / 2 - 450, height/2);
-    text(welcomeText3, width / 2 - 380 , height/2 + 60);
+    text(welcomeText3, width / 2 - 380, height/2 + 60);
     text(welcomeText4, width / 2 - 150, height/2 + 120);
   } else {
     background(255);
@@ -76,14 +76,23 @@ void draw() {
   //let the fun begin
   if (start) {
     background(245, 245, 245); 
+    
+    //logo
     rotatingLogo();
+    
+    //information
     stroke(0);
-    text("If You want to use your keyboard instead", width / 2 - 250, height/2 - 60);
-    text("White keys : QWERTYU for first half <-> ASDFGHJ for second half", width / 2 - 250, height/2 - 60);
-    text("Black keys : 1 to 0", width / 2 - 250, height/2 - 60);
+    fill(0, 102, 153);
+    text("If you want to use your keyboard instead", 40, 200);
+    text("White keys : QWERTYU for first half <-> ASDFGHJ for second half", 40, 300);
+    text("Black keys : 1234567890", 40, 400);
+    
+    //drawings and sounds
     drawWhiteKeys();
     drawBlackKeys();
     measureAndPlay();
+    
+    text("You are away " + distance + " cm from the sensor", width/2 - 300, height - 50);
   }
 }
 
