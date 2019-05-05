@@ -26,9 +26,9 @@ void draw() {
 
 void serialEvent(Serial p) {
     //reading serial port until \n
-    String sensorValue = p.readStringUntil('\n');
-    if (sensorValue != null) {
-        distance = int(sensorValue.trim());
+    String data = p.readStringUntil('\n');
+    if (data != null) {
+        distance = int(data.trim());
         println(distance);
     }
 }

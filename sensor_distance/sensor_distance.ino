@@ -14,7 +14,7 @@ void setup()
 
 void loop()
 {
-  delay(60);
+  delay(600);
   distance_1 = getDistanceOfFirstSensor();
   Serial.println(distance_1); //first sensor
 }
