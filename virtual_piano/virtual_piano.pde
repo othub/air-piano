@@ -1,5 +1,8 @@
 import processing.serial.*;
 import ddf.minim.*;
+import java.awt.AWTException;
+import java.awt.Robot;
+import java.awt.event.KeyEvent;
 
 //arduino
 Serial arduino; 
@@ -11,7 +14,8 @@ boolean start=false;
 //welcome variables
 String welcomeText = "Interactive Piano using Arduino";
 String welcomeText2 = "You can use your keyboard keys to play or Move your fingers in the air";
-String welcomeText3 = "Click 'B' to start :)";
+String welcomeText3 = "Situate Yourself between 75 cm and 200 cm from the sensor";
+String welcomeText4 = "Click 'B' to start :)";
 
 //rotating logo
 float velocidad = TWO_PI / 1200;
@@ -22,8 +26,9 @@ float radio = 100;
 
 //sonido
 Minim minim;
-AudioSample test;
 
+//robot
+Robot robot;
 
 void setup() {
 
@@ -47,9 +52,18 @@ void setup() {
     fill(0, 102, 153);
     text(welcomeText, width / 2 - 250, height/2 - 60);
     text(welcomeText2, width / 2 - 450, height/2);
-    text(welcomeText3, width / 2 - 150, height/2 + 60);
+    text(welcomeText3, width / 2 - 380 , height/2 + 60);
+    text(welcomeText4, width / 2 - 150, height/2 + 120);
   } else {
     background(255);
+  }
+
+  try { 
+    robot = new Robot();
+  } 
+  catch (AWTException e) {
+    e.printStackTrace();
+    exit();
   }
 }
 
@@ -64,8 +78,12 @@ void draw() {
     background(245, 245, 245); 
     rotatingLogo();
     stroke(0);
+    text("If You want to use your keyboard instead", width / 2 - 250, height/2 - 60);
+    text("White keys : QWERTYU for first half <-> ASDFGHJ for second half", width / 2 - 250, height/2 - 60);
+    text("Black keys : 1 to 0", width / 2 - 250, height/2 - 60);
     drawWhiteKeys();
     drawBlackKeys();
+    measureAndPlay();
   }
 }
 
