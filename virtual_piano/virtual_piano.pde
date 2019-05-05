@@ -21,8 +21,8 @@ String welcomeText4 = "Click 'B' to start :)";
 float velocidad = TWO_PI / 1200;
 float angulo = 0;
 float arco = 0;
-String mensaje = "AHAMAY"; 
-float radio = 100;
+String mensaje = "ONAIP RIA "; 
+float radio = 90;
 
 //sonido
 Minim minim;
@@ -92,7 +92,7 @@ void draw() {
     drawBlackKeys();
     measureAndPlay();
     
-    text("You are away " + distance + " cm from the sensor", width/2 - 300, height - 50);
+    text("You are " + distance + " cm away from the sensor", width/2 - 300, height - 50);
   }
 }
 
