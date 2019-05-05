@@ -83,9 +83,10 @@ void draw() {
     //information
     stroke(0);
     fill(0, 102, 153);
-    text("If you want to use your keyboard instead", 40, 200);
-    text("White keys : QWERTYU for first half <-> ASDFGHJ for second half", 40, 300);
-    text("Black keys : 1234567890", 40, 400);
+    text("If you want to use your keyboard instead", 40, 100);
+    text("White keys : QWERTYU for first half", 40, 200);
+    text("White keys : ASDFGHJ for second half", 40, 250);
+    text("Black keys : 1234567890", 40, 350);
     
     //drawings and sounds
     drawWhiteKeys();
