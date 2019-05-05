@@ -6,7 +6,7 @@ int distance_1;
 
 void setup()
 {
-  Serial.begin(9600);
+  Serial.begin(115200);
   //first sensor
   pinMode(echo_1, INPUT);
   pinMode(trigger_1, OUTPUT);
@@ -14,11 +14,9 @@ void setup()
 
 void loop()
 {
-  delay(30);
+  delay(60);
   distance_1 = getDistanceOfFirstSensor();
-  Serial.print(distance_1); //first sensor
-  //Back
-  Serial.print("B");
+  Serial.println(distance_1); //first sensor
 }
 
 int getDistanceOfFirstSensor() {
