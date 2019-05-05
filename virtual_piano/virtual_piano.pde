@@ -4,11 +4,18 @@ import processing.serial.*;
 Serial arduino; 
 int distance;
 
+//start
+boolean start=false;
+//variables
+String welcomeText = "Interactive Piano using Arduino";
+String welcomeText2 = "You can use your keyboard keys to play or Move your fingers in the air";
+String welcomeText3 = "Click 'B' to start :)";
+
+
 void setup() {
-  //fullScreen();
-  size(600, 800);
-  smooth();
-  textFont(createFont("Arial", 30));
+  fullScreen();
+  background(255);
+  textFont(createFont("Georgia", 30, true));
   
   //distance
   distance=0;
@@ -17,11 +24,29 @@ void setup() {
   String arduinoPort = Serial.list()[0];
   arduino = new Serial(this, arduinoPort, 115200);
   arduino.bufferUntil( '\n' );
+  
+  
+  //welcome view
+  if (!start) {
+    fill(0, 102, 153);
+    text(welcomeText, width / 2 - 250, height/2 - 60);
+    text(welcomeText2, width / 2 - 450, height/2);
+    text(welcomeText3, width / 2 - 150, height/2 + 60);
+  } else {
+    background(0);
+  }
 }
 
 
 void draw() {
-
+  //control
+  if (key == 'b' || key == 'B') {
+    start = true;
+  }
+  //let the fun begin
+  if(start){
+    println("ok");
+  }
 }
 
 void serialEvent(Serial p) {
