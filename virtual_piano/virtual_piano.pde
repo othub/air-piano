@@ -97,14 +97,18 @@ void draw() {
   }
 }
 
-void drawWhiteKey(int x_key_coordenates) {
+void drawWhiteKey(int x_key_coordenates, String note) {
   strokeWeight(3);
   rect(x_key_coordenates, height/2 - 90, 110, 450, 3, 6, 12, 18);
+  fill(0, 102, 153);
+  text(note, x_key_coordenates + 40, height/2 + 100);
 }
 
-void drawBlackKey(int x_key_coordenates) {
+void drawBlackKey(int x_key_coordenates, String note) {
   strokeWeight(3);
   rect(x_key_coordenates + 90, height/2 - 90, 40, 330, 3, 6, 12, 18);
+  fill(255);
+  text(note, x_key_coordenates + 90, height/2 - 45);
 }
 
 
